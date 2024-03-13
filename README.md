@@ -26,3 +26,5 @@ imageLab.image2.refresh()
 ```
 
 [Sobre a foto da Lena](https://en.wikipedia.org/wiki/Lenna)
+
+[Sepia algorithm](https://leware.net/photo/blogSepia.html) 
