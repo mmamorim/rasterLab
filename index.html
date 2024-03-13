@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="m-1 p-1 border rounded bg-blue-200 font-bold">
+        Image Lab
+    </div>
+    <div class="m-2">
+        <input type="file" id="btnLoad" />
+    </div>
+    <div class="m-2">
+        <button id="btn1" class="bg-gray-300 px-1 rounded hover:bg-gray-400">
+            Filtro
+        </button>
+    </div>
+
+    <!-- CANVAS DAS IMAGENS -->
+    <div class="m-1 flex items-center gap-2">
+        <div class="border rounded p-1">
+            <div class="text-xs">
+                Source
+            </div>
+            <canvas width="100" height="100" id="canvas_source"></canvas>
+        </div>
+        <div class="border rounded p-1">
+            <div class="text-xs">
+                Dest
+            </div>
+            <canvas width="100" height="100" id="canvas_dest"></canvas>
+        </div>
+    </div>
+    <!-- FIM - CANVAS DAS IMAGENS -->
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
