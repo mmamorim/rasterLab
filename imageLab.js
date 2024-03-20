@@ -1,7 +1,7 @@
 
 const imageLab = {
-    image01: {},
-    image02: {},
+    image1: {},
+    image2: {},
 
     async toBase64(file) {
         return new Promise((resolve, reject) => {
@@ -17,6 +17,10 @@ const imageLab = {
         if (value) {
             console.log('🖼️ image01 already exist!');
             imageLab.loadImageFromBase64(value)
+            let canvas = document.getElementById("canvas_source");
+            let canvas2 = document.getElementById("canvas_dest");
+            imageLab.image1.canvas = canvas
+            imageLab.image2.canvas2 = canvas2
         } else {
             console.log('image01 not found');
         }
@@ -32,6 +36,8 @@ const imageLab = {
             //console.log({ width, height })
             let canvas = document.getElementById("canvas_source");
             let canvas2 = document.getElementById("canvas_dest");
+            imageLab.image1.canvas = canvas
+            imageLab.image2.canvas2 = canvas2
             canvas.width = width
             canvas.height = height
             canvas2.width = width
@@ -67,10 +73,10 @@ const imageLab = {
     },
 
     newImage(base64) {
-        let image = { 
+        let image = {
             base64,
             getPixel(x, y) {
-                let pos = ((y - 1) * image.width)*4 + ((x - 1) * 4)
+                let pos = ((y - 1) * image.width) * 4 + ((x - 1) * 4)
                 return {
                     r: image.data[pos],
                     g: image.data[pos + 1],
@@ -79,16 +85,27 @@ const imageLab = {
                 }
             },
             setPixel(x, y, pixel) {
-                let pos = ((y - 1) * image.width)*4 + ((x - 1) * 4)
+                let pos = ((y - 1) * image.width) * 4 + ((x - 1) * 4)
                 image.data[pos] = pixel.r
-                image.data[pos+1] = pixel.g
-                image.data[pos+2] = pixel.b
-                image.data[pos+3] = pixel.a
+                image.data[pos + 1] = pixel.g
+                image.data[pos + 2] = pixel.b
+                image.data[pos + 3] = pixel.a
             },
             refresh() {
                 let imageData = new ImageData(image.data, image.width, image.height)
                 //console.log('imageData',imageData);
-                image.ctx.putImageData(imageData,0,0);
+                image.ctx.putImageData(imageData, 0, 0);
+            },
+            newImage(width, height) {
+                console.log('image.canvas',image.canvas);
+                image.canvas = document.getElementById("canvas_dest");
+                image.canvas.width = width
+                image.canvas.height = height
+                //image.width = width
+                //image.height = height
+                //let imageData = new ImageData(image.data, width, height)
+                //let imageData = new ImageData(width,height);
+                //image.data = imageData
             }
         }
         return image
