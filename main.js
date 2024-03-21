@@ -7,6 +7,7 @@ import negativo from "./filtros/negativo.js"
 import sepia from "./filtros/sepia.js"
 import flipH from "./filtros/flipH.js"
 import histograma from "./filtros/histograma.js"
+import flipV from "./filtros/flipV.js"
 
 console.log('imageLab', imageLab);
 imageLab.setLoadButtonID('btnLoad')
@@ -17,6 +18,7 @@ createFilters(imageLab, [
     { label: 'Negativo', method: negativo },
     { label: 'Sépia', method: sepia },
     { label: 'Flip Horizontal', method: flipH },
+    { label: 'Flip Vertical', method: flipV },
     { label: 'Histograma', method: histograma },
 ])
 
