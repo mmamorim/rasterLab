@@ -2,6 +2,7 @@
 
 ## Laboratório para aulas de Processamento Digital de Imagens
 
+# link deste repositório: https://github.com/mmamorim/rasterLab
 
 ### Como usar? veja (index.html / main.js) 
 
