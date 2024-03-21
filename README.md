@@ -12,6 +12,23 @@ console.log('imageLab', imageLab);
 imageLab.setLoadButtonID('btnLoad')
 ```
 
+### Como criar um filtro? (main.js) 
+
+criar um novo arquivo exportando uma função e adicionar na lista de filtros...veja exemplo no arquivo filtros/brilho.js
+
+```javascript
+function brilho(imageLab) {
+
+}
+export default brilho
+```
+
+```javascript
+createFilters(imageLab, [
+    { label: 'Brilho', method: brilho },
+    ...
+])
+```
 
 ### Trecho padrão para percorrer todos os pixels 
 

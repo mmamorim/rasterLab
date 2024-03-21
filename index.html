@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -14,23 +15,7 @@
     <div class="m-2">
         <input type="file" id="btnLoad" />
     </div>
-    <div class="m-2">
-        <button id="btn1" class="bg-gray-300 px-1 rounded hover:bg-gray-400">
-            Brilho
-        </button>
-        <button id="btn2" class="bg-gray-300 px-1 rounded hover:bg-gray-400">
-            Monocromático
-        </button>
-        <button id="btn3" class="bg-gray-300 px-1 rounded hover:bg-gray-400">
-            Negativo
-        </button>
-        <button id="btn4" class="bg-gray-300 px-1 rounded hover:bg-gray-400">
-            Sepia
-        </button>
-        <button id="btn5" class="bg-gray-300 px-1 rounded hover:bg-gray-400">
-            Flip Horizontal
-        </button>
-    </div>
+    <div id="buttons"></div>
 
     <!-- CANVAS DAS IMAGENS -->
     <div class="m-1 flex items-center gap-2">
@@ -48,7 +33,13 @@
         </div>
     </div>
     <!-- FIM - CANVAS DAS IMAGENS -->
-
+    <div class="w-[1200px] p-4 border rounded">
+        <div>
+            Histograma
+        </div>
+        <hr>
+        <canvas id="myChart"></canvas>
+    </div>
     <script type="module" src="/main.js"></script>
 </body>
 

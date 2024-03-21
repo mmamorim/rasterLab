@@ -1,22 +1,22 @@
 import imageLab from "./imageLab.js"
+import createFilters from './createFilters.js'
+
 import brilho from "./filtros/brilho.js"
 import monocromatico from "./filtros/monocromatico.js"
 import negativo from "./filtros/negativo.js"
 import sepia from "./filtros/sepia.js"
 import flipH from "./filtros/flipH.js"
+import histograma from "./filtros/histograma.js"
 
 console.log('imageLab', imageLab);
 imageLab.setLoadButtonID('btnLoad')
 
-function mapBtn(btnID,funcFiltro) {
-    document.getElementById(btnID).addEventListener('click', () => {
-        funcFiltro(imageLab)
-    });
-}
-
-mapBtn('btn1',brilho)
-mapBtn('btn2',monocromatico)
-mapBtn('btn3',negativo)
-mapBtn('btn4',sepia)
-mapBtn('btn5',flipH)
+createFilters(imageLab, [
+    { label: 'Brilho', method: brilho },
+    { label: 'Monocromático', method: monocromatico },
+    { label: 'Negativo', method: negativo },
+    { label: 'Sépia', method: sepia },
+    { label: 'Flip Horizontal', method: flipH },
+    { label: 'Histograma', method: histograma },
+])
 
