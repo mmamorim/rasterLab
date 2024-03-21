@@ -1,5 +1,5 @@
-import imageLab from "./imageLab.js"
-import createFilters from './createFilters.js'
+import imageLab from "./imageLab/imageLab.js"
+import createFilters from './imageLab/createFilters.js'
 
 import brilho from "./filtros/brilho.js"
 import monocromatico from "./filtros/monocromatico.js"

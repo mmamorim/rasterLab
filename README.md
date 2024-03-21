@@ -6,7 +6,7 @@
 ### Como usar? veja (index.html / main.js) 
 
 ```javascript
-import imageLab from "./imageLab.js"
+import imageLab from "./imageLab/imageLab.js"
 
 console.log('imageLab', imageLab);
 imageLab.setLoadButtonID('btnLoad')

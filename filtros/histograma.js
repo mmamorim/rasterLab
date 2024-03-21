@@ -1,4 +1,4 @@
-import createGraph from "../grafico.js";
+import createGraph from "../imageLab/grafico.js";
 
 function histograma(imageLab) {
     let vetHistograma = []
