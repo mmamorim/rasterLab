@@ -10,6 +10,7 @@ import histograma from "./filtros/histograma.js"
 import flipV from "./filtros/flipV.js"
 import flipHV from "./filtros/flipHV.js"
 import escala from "./filtros/escala.js"
+import histogramaNorm from "./filtros/histogramaNorm.js"
 
 console.log('imageLab', imageLab);
 imageLab.setLoadButtonID('btnLoad')
@@ -24,5 +25,6 @@ createFilters(imageLab, [
     { label: 'Flip Vertical/Horizontal', method: flipHV },
     { label: 'Histograma', method: histograma },
     { label: 'Escala', method: escala },
+    { label: 'HistogramaNorm', method: histogramaNorm },
 ])
 
