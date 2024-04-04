@@ -11,8 +11,9 @@ import flipV from "./filtros/flipV.js"
 import flipHV from "./filtros/flipHV.js"
 import escala from "./filtros/escala.js"
 import histogramaNorm from "./filtros/histogramaNorm.js"
-import bordas from "./filtros/bordas.js"
+import bordasH from "./filtros/bordasH.js"
 import bordasV from "./filtros/bordasV.js"
+import bordasHV from "./filtros/bordasHV.js"
 
 console.log('imageLab', imageLab);
 imageLab.setLoadButtonID('btnLoad')
@@ -28,8 +29,9 @@ createFilters(imageLab, [
     { label: 'Histograma', method: histograma },
     { label: 'Escala', method: escala },
     { label: 'HistogramaNorm', method: histogramaNorm },
-    { label: 'Bordas', method: bordas },
-    { label: 'Bordas Vertical', method: bordasV },
+    { label: 'Bordas H', method: bordasH },
+    { label: 'Bordas V', method: bordasV },
+    { label: 'Bordas HV', method: bordasHV },
 ])
 
 let elem = document.getElementById("canvas_source")

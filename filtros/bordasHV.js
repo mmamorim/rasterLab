@@ -1,9 +1,9 @@
-function bordas(imageLab) {
-    let fatorCorte = 0.05
+function bordasHV(imageLab) {
+    let fatorCorte = 0.08
     for(let y=1; y <= imageLab.image1.height; y++) {
         for(let x=1; x <= imageLab.image1.width; x++) {
             let p1 = imageLab.image2.getPixel(x,y)
-            let p2 = imageLab.image2.getPixel(x+1,y)
+            let p2 = imageLab.image2.getPixel(x,y+1)
             let variacao = p2.r - p1.r
             if(variacao < 0) variacao = variacao * -1
             if(variacao > fatorCorte * 255) {
@@ -18,4 +18,4 @@ function bordas(imageLab) {
     imageLab.image1.refresh()
 }
 
-export default bordas
+export default bordasHV
