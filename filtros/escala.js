@@ -1,8 +1,8 @@
 function escala(imageLab) {
-    let fatorW = 0.25
-    let fatorH = 0.25
-    let widthDest = Math.round(imageLab.image1.width / fatorW)
-    let heightDest = Math.round(imageLab.image1.height / fatorH)
+    let fatorW = 2.5
+    let fatorH = 2.5
+    let widthDest = Math.round(imageLab.image1.width * fatorW)
+    let heightDest = Math.round(imageLab.image1.height * fatorH)
     for(let y=1; y <= heightDest; y++) {
         for(let x=1; x <= widthDest; x++) {
             // processamento de cada pixel da imagem
