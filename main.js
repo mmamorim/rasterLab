@@ -14,6 +14,7 @@ import histogramaNorm from "./filtros/histogramaNorm.js"
 import bordasH from "./filtros/bordasH.js"
 import bordasV from "./filtros/bordasV.js"
 import bordasHV from "./filtros/bordasHV.js"
+import fill from "./filtros/fill.js"
 
 console.log('imageLab', imageLab);
 imageLab.setLoadButtonID('btnLoad')
@@ -34,11 +35,3 @@ createFilters(imageLab, [
     { label: 'Bordas HV', method: bordasHV },
 ])
 
-let elem = document.getElementById("canvas_source")
-console.log(elem);
-
-elem.onclick = function (e) {
-    let { x, y } = e
-    console.log("e", e );
-    console.log("click", { x, y });
-}

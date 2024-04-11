@@ -1,6 +1,6 @@
 let chart = null
 
-function createGraph(vetLabels,vetValues) {
+function createGraph(vetLabels,vetValues,onclick) {
     const canvas = document.getElementById('myChart');
     if(chart) {
         chart.destroy()
@@ -21,8 +21,10 @@ function createGraph(vetLabels,vetValues) {
                 y: {
                     beginAtZero: true
                 }
-            }
-        }
+            },
+            onClick: onclick
+        },
+        
     });
 }
 
