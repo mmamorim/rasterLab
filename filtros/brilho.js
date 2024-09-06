@@ -3,7 +3,7 @@ function brilho(imageLab) {
         for(let x=1; x <= imageLab.image1.width; x++) {
             // processamento de cada pixel da imagem
             let pixel = imageLab.image1.getPixel(x,y)
-            let brilho = 2
+            let brilho = 9
             pixel.r = pixel.r * brilho
             pixel.g = pixel.g * brilho
             pixel.b = pixel.b * brilho
